@@ -1,4 +1,7 @@
+package Recursion
+
 /**
+ * leedcode 46 medium
  * 全排列
  */
 val list = arrayListOf<List<Int>>()
@@ -29,9 +32,17 @@ fun permute2(nums: IntArray, n: Int) {
 }
 
 fun main() {
-    val nums = IntArray(3)
+    val nums = IntArray(5)
     nums[0] = 1
     nums[1] = 2
     nums[2] = 3
-    permute(nums)
+    nums[3] = 4
+    nums[4] = 5
+    val list = permute(nums)
+    list.forEach {
+        it.forEach { it1 ->
+            print("$it1 ")
+        }
+        println()
+    }
 }

@@ -1,7 +1,9 @@
+package Recursion
+
 /**
  * 数组合并排序
  */
-fun merge(nums1: IntArray, m: Int, nums2: IntArray, n: Int): Unit {
+fun merge(nums1: IntArray, m: Int, nums2: IntArray, n: Int) {
     if (nums1.size < nums2.size) {
         merge(nums2, n, nums1, m)
     }

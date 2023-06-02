@@ -20,12 +20,26 @@ fun printListNode(node: ListNode?) {
 /**
  * 获取链表长度
  */
-fun getListNodeLength(node: ListNode): Int {
+fun ListNode.length(): Int {
     var count = 1
-    var temp = node
+    var temp = this
     while (temp.next != null) {
         count++
         temp.next?.let {  temp = it }
     }
     return count
+}
+fun createList(vararg nodes: ListNode): ListNode? {
+    var temp: ListNode? = null
+    var head: ListNode? = null
+    for (node in nodes) {
+        if (temp == null) {
+            temp = node
+            head = temp
+        } else {
+            temp.next = node
+            temp = temp.next
+        }
+    }
+    return head
 }

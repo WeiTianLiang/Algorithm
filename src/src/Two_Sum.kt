@@ -1,21 +1,17 @@
-import kotlin.math.max
-import kotlin.math.min
-
 /**
+ * leetcode 1 easy
  * 两数之和
  */
 fun twoSum(nums: IntArray, target: Int): IntArray {
-    val map = HashMap<Int, Int>()
-    val num = IntArray(2)
+    val map = mutableMapOf<Int, Int>()
     for (i in nums.indices) {
-        if (map.containsKey(nums[i])) {
-            num[0] = min(i, map[nums[i]]!!)
-            num[1] = max(i, map[nums[i]]!!)
-        } else if (!map.containsKey(nums[i])) {
-            map[target - nums[i]] = i
+        val value = target - nums[i]
+        if (map.containsKey(value)) {
+            return intArrayOf(map[value]!!, i)
         }
+        map[nums[i]] = i
     }
-    return num
+    throw IllegalAccessException("Wrong")
 }
 
 fun main() {
