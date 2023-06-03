@@ -1,4 +1,5 @@
 /**
+ * leetcode 70 easy
  * 爬楼梯
  */
 fun climbStairs(n: Int): Int {
