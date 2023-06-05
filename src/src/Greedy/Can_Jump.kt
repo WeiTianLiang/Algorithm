@@ -1,20 +1,7 @@
-fun main() {
-    val arr = IntArray(11)
-    arr[0] = 4
-    arr[1] = 0
-    arr[2] = 4
-    arr[3] = 2
-    arr[4] = 2
-    arr[5] = 0
-    arr[6] = 1
-    arr[7] = 3
-    arr[8] = 3
-    arr[9] = 0
-    arr[10] = 3
-    print(canJump(arr))
-}
+package Greedy
 
 /**
+ * leetcode 55 medium
  * 跳跃游戏
  */
 fun canJump(nums: IntArray): Boolean {
@@ -30,11 +17,14 @@ fun canJump(nums: IntArray): Boolean {
     }
     var maxFar = nums[0]
     for (i in 1 until length) {
-        if (i <= maxFar) {
-            if (i + nums[i] > maxFar) {
-                maxFar = nums[i] + i
-            }
+        if (i <= maxFar && i + nums[i] > maxFar) {
+            maxFar = nums[i] + i
         }
     }
     return maxFar >= length - 1
+}
+
+fun main() {
+    val num = intArrayOf(3, 2, 1, 0, 4)
+    print(canJump(num))
 }
