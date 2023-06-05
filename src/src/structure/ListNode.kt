@@ -43,3 +43,18 @@ fun createList(vararg nodes: ListNode): ListNode? {
     }
     return head
 }
+
+fun createList(vararg nodeValues: Int): ListNode? {
+    var temp: ListNode? = null
+    var head: ListNode? = null
+    nodeValues.forEach {
+        if (temp == null) {
+            temp = ListNode(it)
+            head = temp
+        } else {
+            temp!!.next = ListNode(it)
+            temp = temp!!.next
+        }
+    }
+    return head
+}
