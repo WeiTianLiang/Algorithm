@@ -1,3 +1,5 @@
+package String
+
 /**
  * leetcode 387 easy
  * 字符串中的第一个唯一字符
