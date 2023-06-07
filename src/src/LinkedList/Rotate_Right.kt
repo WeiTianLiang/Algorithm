@@ -9,7 +9,7 @@ import structure.printListNode
  * leedcode 61 medium
  * 旋转链表
  */
-fun rotateRight(head: ListNode?, k: Int): ListNode? {
+private fun rotateRight(head: ListNode?, k: Int): ListNode? {
     head ?: return null
     var tempNode = head
     val tempHead = tempNode

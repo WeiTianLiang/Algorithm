@@ -7,7 +7,7 @@ import structure.createList
  * leetcode 2130 medium
  * 链表最大孪生和
  */
-fun pairSum(head: ListNode?): Int {
+private fun pairSum(head: ListNode?): Int {
     head ?: return 0
     var tempHead = head
     var slow = head
@@ -31,7 +31,7 @@ fun pairSum(head: ListNode?): Int {
     return max
 }
 
-fun reverseThisList(head: ListNode?): ListNode? {
+private fun reverseThisList(head: ListNode?): ListNode? {
     var preHead = head
     var curHead: ListNode? = null
     while (preHead != null) {

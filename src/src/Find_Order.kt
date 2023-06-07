@@ -4,7 +4,7 @@ import java.util.concurrent.LinkedBlockingQueue
  * 剑指offerII 113 medium
  * 课程排序
  */
-fun findOrder(numCourses: Int, prerequisites: Array<IntArray>): IntArray {
+private fun findOrder(numCourses: Int, prerequisites: Array<IntArray>): IntArray {
     // 建图 key:当前需要对象 value:当前对象需要依赖的对象
     val originMap = mutableMapOf<Int, ArrayList<Int>>()
     for (i in 0 until numCourses) {

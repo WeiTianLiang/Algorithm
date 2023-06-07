@@ -4,12 +4,12 @@ package LinkedList
  * leedcode 138 medium
  * 复制带随机指针的链表
  */
-class Node(var `val`: Int) {
+private class Node(var `val`: Int) {
     var next: Node? = null
     var random: Node? = null
 }
 
-fun copyRandomList(node: Node?): Node? {
+private fun copyRandomList(node: Node?): Node? {
     node ?: return null
     val map = mutableMapOf<Node, Node>()
     var tempNode = node

@@ -2,7 +2,7 @@
  * leetcode 70 easy
  * 爬楼梯
  */
-fun climbStairs(n: Int): Int {
+private fun climbStairs(n: Int): Int {
     return when {
         n <= 1 -> {
             1

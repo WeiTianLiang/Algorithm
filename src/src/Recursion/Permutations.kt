@@ -4,14 +4,14 @@ package Recursion
  * leedcode 46 medium
  * 全排列
  */
-val list = arrayListOf<List<Int>>()
+private val list = arrayListOf<List<Int>>()
 
-fun permute(nums: IntArray): List<List<Int>> {
+private fun permute(nums: IntArray): List<List<Int>> {
     permute2(nums, 0)
     return list.toList()
 }
 
-fun permute2(nums: IntArray, n: Int) {
+private fun permute2(nums: IntArray, n: Int) {
     if (nums.isEmpty()) {
         return
     }

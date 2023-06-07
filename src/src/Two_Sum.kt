@@ -2,7 +2,7 @@
  * leetcode 1 easy
  * 两数之和
  */
-fun twoSum(nums: IntArray, target: Int): IntArray {
+private fun twoSum(nums: IntArray, target: Int): IntArray {
     val map = mutableMapOf<Int, Int>()
     for (i in nums.indices) {
         val value = target - nums[i]

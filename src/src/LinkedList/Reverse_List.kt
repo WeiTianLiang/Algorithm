@@ -8,7 +8,7 @@ import structure.printListNode
  * leetcode 206 easy
  * 反转链表
  */
-fun reverseList(head: ListNode?): ListNode? {
+private fun reverseList(head: ListNode?): ListNode? {
     head ?: return null
 
     var pre: ListNode? = null

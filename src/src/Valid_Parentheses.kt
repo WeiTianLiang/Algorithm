@@ -1,7 +1,7 @@
 /**
  * 有效括号
  */
-fun isValid(s: String): Boolean {
+private fun isValid(s: String): Boolean {
     var str = s
     while (true) {
         val len = str.length

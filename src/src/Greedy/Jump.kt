@@ -6,7 +6,7 @@ import kotlin.math.max
  * leetcode 45 medium
  * 跳跃游戏 II
  */
-fun jump(nums: IntArray): Int {
+private fun jump(nums: IntArray): Int {
     if (nums.size == 1) {
         return 0
     }

@@ -4,7 +4,7 @@ package Greedy
  * leetcode 134 medium
  * 加油站
  */
-fun canCompleteCircuit(gas: IntArray, cost: IntArray): Int {
+private fun canCompleteCircuit(gas: IntArray, cost: IntArray): Int {
     for (startIndex in gas.indices) {
         // 找到可以作为出发点的位置
         if (gas[startIndex] < cost[startIndex] || gas[startIndex] == 0) {

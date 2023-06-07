@@ -1,7 +1,7 @@
 /**
  * 整数翻转
  */
-fun reverse(x: Int): Int {
+private fun reverse(x: Int): Int {
     var symbol = 1
     var temp = 0
     var num = x

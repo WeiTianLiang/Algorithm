@@ -4,7 +4,7 @@ package `Fast-SlowPointer`
  * leetcode 202 easy
  * 快乐数
  */
-fun isHappy(n: Int): Boolean {
+private fun isHappy(n: Int): Boolean {
     if (n == 0) {
         return false
     }
@@ -22,7 +22,7 @@ fun isHappy(n: Int): Boolean {
     return slow == 1
 }
 
-fun doHappy(n: Int): Int {
+private fun doHappy(n: Int): Int {
     var sum = 0
     var number = n
     while (number != 0) {

@@ -9,7 +9,7 @@ import structure.printListNode
  * leetcode 2095 medium
  * 删除链表中间节点
  */
-fun deleteMiddle(head: ListNode?): ListNode? {
+private fun deleteMiddle(head: ListNode?): ListNode? {
     head ?: return null
     val size = head.length()
     if (size == 1) {

@@ -1,7 +1,7 @@
 /**
  * 回文数
  */
-fun isPalindrome(x: Int): Boolean {
+private fun isPalindrome(x: Int): Boolean {
     if (x < 0) {
         return false
     }

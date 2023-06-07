@@ -4,7 +4,7 @@ package DoublePointer
  * leetcode 283 easy
  * 移动零
  */
-fun moveZeroes(nums: IntArray) {
+private fun moveZeroes(nums: IntArray) {
     if (nums.isEmpty() || nums.size == 1) {
         return
     }

@@ -16,7 +16,7 @@ import structure.printListNode
  * 3.对多个分割后的链表进行有序链表合并
  * 4.返回排序好的链表
  */
-fun sortList(head: ListNode?): ListNode? {
+private fun sortList(head: ListNode?): ListNode? {
     head?.next ?: return head
     var slow = head
     var fast = head.next
@@ -36,7 +36,7 @@ fun sortList(head: ListNode?): ListNode? {
 /**
  * 合并两个有序链表
  */
-fun merge(left: ListNode?, right: ListNode?): ListNode? {
+private fun merge(left: ListNode?, right: ListNode?): ListNode? {
     if (left == null && right == null) {
         return null
     }

@@ -8,7 +8,7 @@ import structure.printListNode
  * leetcode 328 medium
  * 奇偶链表
  */
-fun oddEvenList(head: ListNode?): ListNode? {
+private fun oddEvenList(head: ListNode?): ListNode? {
     head ?: return null
     // 奇数表头
     val oddHead = ListNode(-1)

@@ -9,7 +9,7 @@ import structure.printListNode
  * leetcode 2 medium
  * 两数相加
  */
-fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
+private fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
     l1 ?: return null
     l2 ?: return null
     val root = ListNode(0)

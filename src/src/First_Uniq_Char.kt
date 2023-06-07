@@ -2,7 +2,7 @@
  * leetcode 387 easy
  * 字符串中的第一个唯一字符
  */
-fun firstUniqChar(s: String): Int {
+private fun firstUniqChar(s: String): Int {
     val map = mutableMapOf<Char, Int>()
     for (i in s.indices) {
         val value = s[i]

@@ -4,13 +4,13 @@ package Recursion
  * leedcode 47 medium
  * 全排列2
  */
-fun permuteUnique(nums: IntArray): List<List<Int>> {
+private fun permuteUnique(nums: IntArray): List<List<Int>> {
     val list = ArrayList<ArrayList<Int>>()
     permuteMerge(nums, list, 0)
     return list
 }
 
-fun permuteMerge(nums: IntArray, list: ArrayList<ArrayList<Int>>, n: Int) {
+private fun permuteMerge(nums: IntArray, list: ArrayList<ArrayList<Int>>, n: Int) {
     if (n == nums.size) {
         list.add(nums.toList() as ArrayList<Int>)
         return

@@ -4,7 +4,7 @@ package Greedy
  * leetcode 55 medium
  * 跳跃游戏
  */
-fun canJump(nums: IntArray): Boolean {
+private fun canJump(nums: IntArray): Boolean {
     val length = nums.size
     if (nums[0] == 0 && nums.size > 1) {
         return false

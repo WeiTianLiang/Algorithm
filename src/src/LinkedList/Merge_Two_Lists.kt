@@ -9,7 +9,7 @@ import structure.printListNode
  * leetcode 21 easy
  * 合并两个有序链表
  */
-fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
+private fun mergeTwoLists(list1: ListNode?, list2: ListNode?): ListNode? {
     if (list1 == null && list2 == null) {
         return null
     }

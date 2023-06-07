@@ -9,8 +9,7 @@ import structure.printListNode
  * leedcode 19 medium
  * 删除链表的倒数第 N 个结点
  */
-
-fun removeNthFromEnd(head: ListNode?, n: Int): ListNode? {
+private fun removeNthFromEnd(head: ListNode?, n: Int): ListNode? {
     head ?: return null
     var tempNode = head
     val tempHead = tempNode

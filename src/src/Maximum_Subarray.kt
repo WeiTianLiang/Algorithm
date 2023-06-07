@@ -3,7 +3,7 @@ import kotlin.math.max
 /**
  * 最大连续字串和
  */
-fun maxSubArray(nums: IntArray): Int {
+private fun maxSubArray(nums: IntArray): Int {
     var nowNumber = nums[0]
     var tempNumber = 0
     nums.forEach {

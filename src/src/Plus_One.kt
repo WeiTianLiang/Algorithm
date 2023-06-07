@@ -1,7 +1,7 @@
 /**
  * 加一数组
  */
-fun plusOne(digits: IntArray): IntArray {
+private fun plusOne(digits: IntArray): IntArray {
     val length = digits.size
     var i = length - 1
     var temp = 1

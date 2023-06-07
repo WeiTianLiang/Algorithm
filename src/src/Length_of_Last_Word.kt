@@ -1,7 +1,7 @@
 /**
  * 最后一个单词的长度
  */
-fun lengthOfLastWord(s: String): Int {
+private fun lengthOfLastWord(s: String): Int {
     if (s.isEmpty()) {
         return 0
     }

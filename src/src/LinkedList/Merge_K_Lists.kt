@@ -8,7 +8,7 @@ import structure.printListNode
  * leetcode 23 hard
  * 合并 K 个升序链表
  */
-fun mergeKLists(lists: Array<ListNode?>): ListNode? {
+private fun mergeKLists(lists: Array<ListNode?>): ListNode? {
     if (lists.isEmpty()) {
         return null
     }
@@ -38,7 +38,7 @@ fun mergeKLists(lists: Array<ListNode?>): ListNode? {
     }
 }
 
-fun fetchEndIndex(lists: Array<ListNode?>): Int {
+private fun fetchEndIndex(lists: Array<ListNode?>): Int {
     for (i in lists.size - 1 downTo 0) {
         if (lists[i] != null) {
             return i
@@ -47,7 +47,7 @@ fun fetchEndIndex(lists: Array<ListNode?>): Int {
     return 0
 }
 
-fun mergeThisTwoList(firstNode: ListNode?, secondNode: ListNode?): ListNode? {
+private fun mergeThisTwoList(firstNode: ListNode?, secondNode: ListNode?): ListNode? {
     if (firstNode == null && secondNode == null) {
         return null
     }

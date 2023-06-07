@@ -3,7 +3,7 @@ import kotlin.math.min
 /**
  * 最长公共前缀
  */
-fun longestCommonPrefix(strs: Array<String>): String {
+private fun longestCommonPrefix(strs: Array<String>): String {
     if (strs.isEmpty()) {
         return ""
     }
@@ -14,7 +14,7 @@ fun longestCommonPrefix(strs: Array<String>): String {
     return mid
 }
 
-fun twoWordCommonPrefix(str1: String, str2: String): String {
+private fun twoWordCommonPrefix(str1: String, str2: String): String {
     val builder = StringBuilder()
     for (i in 0 until min(str1.length, str2.length)) {
         if (str1[i] == str2[i]) {

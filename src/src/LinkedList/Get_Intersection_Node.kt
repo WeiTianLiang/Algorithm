@@ -7,7 +7,7 @@ import structure.createList
  * leetcode 160 easy
  * 相交链表
  */
-fun getIntersectionNode(headA: ListNode?, headB: ListNode?): ListNode? {
+private fun getIntersectionNode(headA: ListNode?, headB: ListNode?): ListNode? {
     headA ?: return null
     headB ?: return null
 
