@@ -1,5 +1,7 @@
 package map
 
+import java.util.Stack
+import kotlin.math.max
 
 /**
  * 剑指offerII 115 medium
@@ -8,52 +10,65 @@ package map
 private fun sequenceReconstruction(nums: IntArray, sequences: Array<IntArray>): Boolean {
     // 建图
     val map = mutableMapOf<Int, ArrayList<Int>>()
-    for (num in nums) {
-        map[num] = arrayListOf()
-    }
     sequences.forEach {
         var i = 0
         while (i < it.size - 1) {
-            map[it[i]]?.add(nums[i + 1])
+            var list = map[it[i]]
+            if (list == null) {
+                list = arrayListOf()
+                map[it[i]] = list
+            }
+            list.add(nums[i + 1])
             i++
         }
     }
 
     // 寻找根节点, 统计各节点对应的数量
-    var rootNumber = 0
-    val isSearchMap = mutableMapOf<Int, Boolean>()
+    val rootStack = Stack<Int>()
+    val countMap = mutableMapOf<Int, Int>()
     map.forEach(action = {
         if (it.value.size == 0) {
-            rootNumber = it.key
-            return@forEach
-        }
-        isSearchMap[it.key] = false
-    })
-
-    // 深度遍历图
-    dfs(map, isSearchMap, rootNumber)
-    print("depth: $depth")
-
-    return depth == nums.size
-}
-
-private var depth = 0
-
-private fun dfs(map: Map<Int, ArrayList<Int>>, isSearchMap: MutableMap<Int, Boolean>, root: Int) {
-    isSearchMap[root] = true
-    depth++
-    map.forEach(action = {
-        if (!isSearchMap[it.key]!!) {
-            dfs(map, isSearchMap, it.key)
+            rootStack.push(it.key)
+        } else {
+            countMap[it.key] = it.value.size
         }
     })
+
+    // 深度遍历有向图
+    var maxDepth = 0
+    var depth = 0
+    // 用于遍历的栈
+    val loopStack = Stack<Int>()
+    while (true) {
+        if (loopStack.isEmpty()) {
+            // 添加根节点
+            maxDepth = maxDepth.coerceAtLeast(depth)
+            depth = 0
+            if (rootStack.isEmpty()) {
+                break
+            }
+            loopStack.push(rootStack.pop())
+        }
+        val key = loopStack.pop()
+        depth++
+        map.forEach(action = {
+            if (key == it.key && countMap[key] != 0) {
+                loopStack.push(it.value[it.value.size - countMap[key]!!])
+            }
+        })
+    }
+    print("maxDepth : $maxDepth    ")
+
+    return maxDepth == nums.size
 }
 
 fun main() {
-    val nums = intArrayOf(1, 2, 3)
+    val nums = intArrayOf(1, 4, 2, 3)
     val sequences = arrayOf(
         intArrayOf(1, 2),
-        intArrayOf(1, 3)
+        intArrayOf(1, 3),
+        intArrayOf(2, 3),
+        intArrayOf(4, 2)
     )
     print(sequenceReconstruction(nums, sequences))
 }
