@@ -71,3 +71,10 @@ fun midPrint(root: TreeNode?) {
     print(root.value as Int)
     midPrint(root.right)
 }
+
+fun changeTree(root: TreeNode?, map: Map<Int, Int>) {
+    root ?: return
+    root.value = map[root.value]!!
+    changeTree(root.left, map)
+    changeTree(root.right, map)
+}

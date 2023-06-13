@@ -2,6 +2,7 @@ package Tree
 
 import structure.TreeNode
 import structure.buildTree
+import structure.changeTree
 import structure.prePrint
 
 /**
@@ -18,13 +19,6 @@ private fun pruneTree(root: TreeNode?): TreeNode? {
         return null
     }
     return root
-}
-
-private fun changeTree(root: TreeNode?, map: Map<Int, Int>) {
-    root ?: return
-    root.value = map[root.value]!!
-    changeTree(root.left, map)
-    changeTree(root.right, map)
 }
 
 fun main() {
