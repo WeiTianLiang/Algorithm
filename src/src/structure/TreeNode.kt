@@ -49,7 +49,7 @@ fun postPrint(root: TreeNode?) {
     root ?: return
     postPrint(root.left)
     postPrint(root.right)
-    print(root.value as Int)
+    print("${root.value as Int} ")
 }
 
 /**
@@ -57,7 +57,7 @@ fun postPrint(root: TreeNode?) {
  */
 fun prePrint(root: TreeNode?) {
     root ?: return
-    print(root.value as Int)
+    print("${root.value as Int} ")
     prePrint(root.left)
     prePrint(root.right)
 }
@@ -68,7 +68,7 @@ fun prePrint(root: TreeNode?) {
 fun midPrint(root: TreeNode?) {
     root ?: return
     midPrint(root.left)
-    print(root.value as Int)
+    print("${root.value as Int} ")
     midPrint(root.right)
 }
 
