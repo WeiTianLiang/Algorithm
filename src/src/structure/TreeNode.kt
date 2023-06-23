@@ -1,5 +1,7 @@
 package structure
 
+import java.util.*
+
 /**
  * 二叉树的数据结构
  */
@@ -40,6 +42,27 @@ private fun buildTreeHelp(
     root.left = buildTreeHelp(map, preorder, pStart + 1, pStart + leftNum, inorder, iStart, midIndex - 1)
     root.right = buildTreeHelp(map, preorder, pStart + 1 + leftNum, pEnd, inorder, midIndex + 1, iEnd)
     return root
+}
+
+/**
+ * 前序遍历，寻找值为 value 的某个节点
+ */
+fun findByValue(root: TreeNode?, value: Int): TreeNode? {
+    root ?: return null
+    var tempRoot = root
+    val stack = Stack<TreeNode>()
+    while (stack.isNotEmpty() || tempRoot != null) {
+        while (tempRoot != null) {
+            if (tempRoot.value == value) {
+                return tempRoot
+            }
+            stack.push(tempRoot)
+            tempRoot = tempRoot.left
+        }
+        val temp = stack.pop()
+        tempRoot = temp.right
+    }
+    return null
 }
 
 /**

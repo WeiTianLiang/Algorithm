@@ -16,6 +16,7 @@ private fun pathSum(root: TreeNode?, targetSum: Int): Int {
     pathSum(root.right, targetSum)
     return count
 }
+
 private fun calculate(root: TreeNode?, targetSum: Int) {
     root ?: return
     if (targetSum == root.value) {
@@ -25,6 +26,7 @@ private fun calculate(root: TreeNode?, targetSum: Int) {
     calculate(root.left, newTarget)
     calculate(root.right, newTarget)
 }
+
 fun main() {
     val map = mutableMapOf<Int, Int>()
     map[0] = 10
