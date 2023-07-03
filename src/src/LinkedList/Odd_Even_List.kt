@@ -37,5 +37,5 @@ private fun oddEvenList(head: ListNode?): ListNode? {
 
 fun main() {
     val head = createList(2, 1, 3, 5, 6, 4, 7)
-    printListNode(oddEvenList(head))
+    oddEvenList(head).printListNode()
 }

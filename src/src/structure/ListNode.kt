@@ -9,8 +9,8 @@ class ListNode(var value: Any) {
 /**
  * 打印单链表
  */
-fun printListNode(node: ListNode?) {
-    var temp = node
+fun ListNode?.printListNode() {
+    var temp = this
     while (temp != null) {
         print("${temp.value} ")
         temp = temp.next

@@ -32,5 +32,5 @@ private fun deleteMiddle(head: ListNode?): ListNode? {
 
 fun main() {
     val head = createList(2)
-    printListNode(deleteMiddle(head))
+    deleteMiddle(head).printListNode()
 }

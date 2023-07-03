@@ -88,5 +88,5 @@ fun main() {
     val head3 = createList(ListNode(-2), ListNode(-1), ListNode(-1), ListNode(-1))
     val head4 = createList(ListNode(-2))
     val lists = arrayOf(head3, head4)
-    printListNode(mergeKLists(lists))
+    mergeKLists(lists).printListNode()
 }

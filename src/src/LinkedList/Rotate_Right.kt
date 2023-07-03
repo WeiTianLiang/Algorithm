@@ -57,5 +57,5 @@ fun main() {
         ListNode(5)
     )
 
-    printListNode(rotateRight(head, 10))
+    rotateRight(head, 10).printListNode()
 }

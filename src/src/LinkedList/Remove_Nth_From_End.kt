@@ -41,5 +41,5 @@ fun main() {
         ListNode(5)
     )
 
-    printListNode(removeNthFromEnd(head, 1))
+    removeNthFromEnd(head, 1).printListNode()
 }

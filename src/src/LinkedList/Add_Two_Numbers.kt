@@ -58,5 +58,5 @@ fun main() {
         ListNode(4)
     )
 
-    addTwoNumbers(head1, head2)?.let { printListNode(it) }
+    addTwoNumbers(head1, head2)?.let { it.printListNode() }
 }

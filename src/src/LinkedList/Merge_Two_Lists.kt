@@ -53,5 +53,5 @@ fun main() {
         ListNode(3),
         ListNode(4)
     )
-    printListNode(mergeTwoLists(head1, head2))
+    mergeTwoLists(head1, head2).printListNode()
 }

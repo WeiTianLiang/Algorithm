@@ -76,6 +76,5 @@ fun main() {
         ListNode(3)
     )
 
-    val result = sortList(head)
-    printListNode(result)
+    sortList(head).printListNode()
 }

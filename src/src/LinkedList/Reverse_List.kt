@@ -32,5 +32,5 @@ fun main() {
         ListNode(5)
     )
 
-    printListNode(reverseList(head))
+    reverseList(head).printListNode()
 }
