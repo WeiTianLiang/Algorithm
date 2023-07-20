@@ -36,5 +36,5 @@ fun main() {
     val root = buildTree(preorder, inorder)
     changeTree(root, map)
     val temp = pruneTree(root)
-    prePrint(temp)
+    temp.prePrint()
 }

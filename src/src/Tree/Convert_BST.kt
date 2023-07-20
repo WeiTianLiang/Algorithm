@@ -28,5 +28,5 @@ fun main() {
     val mid = intArrayOf(0, 1, 2, 3, 4, 5, 6, 7, 8)
     val root = buildTree(pre, mid)
     val newRoot = convertBST(root)
-    prePrint(newRoot)
+    newRoot.prePrint()
 }

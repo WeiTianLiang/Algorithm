@@ -68,31 +68,31 @@ fun findByValue(root: TreeNode?, value: Int): TreeNode? {
 /**
  * 后续遍历
  */
-fun postPrint(root: TreeNode?) {
-    root ?: return
-    postPrint(root.left)
-    postPrint(root.right)
-    print("${root.value as Int} ")
+fun TreeNode?.postPrint() {
+    this ?: return
+    this.left.postPrint()
+    this.right.postPrint()
+    print("${this.value as Int} ")
 }
 
 /**
  * 前续遍历
  */
-fun prePrint(root: TreeNode?) {
-    root ?: return
-    print("${root.value as Int} ")
-    prePrint(root.left)
-    prePrint(root.right)
+fun TreeNode?.prePrint() {
+    this ?: return
+    print("${this.value as Int} ")
+    this.left.prePrint()
+    this.right.prePrint()
 }
 
 /**
  * 中续遍历
  */
-fun midPrint(root: TreeNode?) {
-    root ?: return
-    midPrint(root.left)
-    print("${root.value as Int} ")
-    midPrint(root.right)
+fun TreeNode?.midPrint() {
+    this ?: return
+    this.left.midPrint()
+    print("${this.value as Int} ")
+    this.right.midPrint()
 }
 
 fun changeTree(root: TreeNode?, map: Map<Int, Int>) {
