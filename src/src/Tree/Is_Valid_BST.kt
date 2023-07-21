@@ -1,7 +1,6 @@
 package Tree
 
 import structure.TreeNode
-import structure.buildTree
 
 /**
  * leetcode 98 medium
